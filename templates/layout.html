@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<title>My Site</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <ul>
+			<li><a class="active" href="Index.html">Home</a></li>
+			<li><a href="pollution.html">Pollution</a></li>
+			<li><a href="game.html">MiniGame</a></li>
+			<li style="float:right"><a href="about.html">About</a></li>
+		</ul>
+<div id="wrapper">
+{% include "header.html" %}
+{%include "navigation.html" %}
+{% block content%}{% endblock %}
+{% include "footer.html" %}
+</div>
+</body>
+</html>
