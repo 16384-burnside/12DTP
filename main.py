@@ -11,5 +11,9 @@ def home():
 def about():
   return render_template('about.html', title='About')
 
+@app.route('/search')
+def search():
+  return render_template('search.html', title='Search')
+
 if __name__ == '__main__':
-  app.run(debug = True, host = "0.0.0.0", port = 8080)
+  app.run(debug=True)
