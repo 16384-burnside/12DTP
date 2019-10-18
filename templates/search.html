@@ -1,4 +1,30 @@
 {% extends "layout.html" %}
 {% block content %}
 <p>Search</p>
+<form action="/search">
+  <select name="MuscleGroup">
+    <option value="Triceps">Triceps</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <select name="Difficulty">
+    <option value="Triceps">Triceps</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+<div class="exercises">
+
+  <ul>
+    {% for exercise in results %}
+    <li>{{ exercise[5] }}</li> </br>
+    {% endfor %}
+  </ul>
+</div>
 {% endblock content %}
+
+https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_select
